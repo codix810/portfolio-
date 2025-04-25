@@ -8,11 +8,11 @@ import { HiOutlineArrowSmRight } from "react-icons/hi";
 const Services = () => {
   return (
     <div id='Services'>
-        <div  className='bg-slate-950 text-white w-full h-[1050px] md:h-[650px]'>
+        <div  className='bg-slate-950 text-white w-full '>
                 {/* ----title----- */}
             <h1 data-aos="fade-up" className='text-center py-[70px]  font-bold'>Our Services</h1>
                 {/* ----card----- */}
-            <div className='flex flex-wrap gap-1 '>
+            <div className='flex flex-wrap gap-1  '>
                 <div data-aos="fade-up" className='bg-black/90 w-[95%] p-3 m-3  md:w-[45%] '>
                     <FaCode size={40}  color="blue" />
                     <h2>Website Development</h2>
@@ -31,7 +31,7 @@ const Services = () => {
                     <HiOutlineArrowSmRight  size={22}  color="blue"/>
                     </div>
                 </div>
-                <div data-aos="fade-up" className='bg-black/100 w-[95%] p-3 m-3 md:w-[45%]'>
+                <div data-aos="fade-up" className='bg-black/100 w-[95%] p-3 m-3 md:w-[45%] '>
                     <FaChartLine size={40} color="blue " />
                     <h2>Web Applications & Dashboards </h2>
                     <p>Complex web applications with powerful analytics  </p>

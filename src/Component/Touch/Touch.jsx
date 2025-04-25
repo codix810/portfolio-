@@ -14,7 +14,7 @@ const Touch = () => {
             {/* body */}
             <div className='flex flex-col md:flex-row  '>
                 {/* Form */}
-                <div data-aos='zoom-in' className='w-[95%] md:w-[58%]  px-5 py-5 '>
+                <div data-aos='zoom-in' className='w-[95%] p-3 md:w-[58%]  md:px-5  py-5 '>
                     <Form  className='bg-slate-950 p-5 rounded-[30px]'>
                         <h3 className="mb-3 ">Send Us a Message</h3>
                         <Form.Group className="mb-3 " controlId="exampleForm.ControlInput1">
@@ -35,7 +35,7 @@ const Touch = () => {
                     </Form>
                 </div>
                 {/* -----Contact Information -----*/}
-                <div className=' w-[95%]  flex flex-col gap-2 md:w-[38%]  px-5 py-5'>
+                <div className=' w-[95%]   flex flex-col gap-2 md:w-[38%] px-5  py-5'>
                     <h3 data-aos="fade-up" className='mb-3'>Contact Information </h3>
                     <div className='flex  flex-row gap-2'>
                         <CiLocationOn data-aos="fade-up" size={30} color="blue"/>

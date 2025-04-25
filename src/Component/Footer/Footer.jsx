@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <div  className='bg-black w-full min-h-[auto] text-white   '>
-        <div data-aos='zoom-in' className='flex justify-between  flex-wrap px-[100px] py-5  '>
+        <div data-aos='zoom-in' className='flex justify-between   flex-wrap md:px-[100px] px-[70px] py-5  '>
             {/* logo */}
             <div>
                 <h1 className='font-bold m-1 text-3xl cursor-pointer mb-2 '>Tech<span className='text-blue-500'>Forge</span></h1>
