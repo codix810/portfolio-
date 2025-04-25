@@ -14,7 +14,7 @@ const Touch = () => {
             {/* body */}
             <div className='flex flex-col md:flex-row  '>
                 {/* Form */}
-                <div data-aos='zoom-in' className='w-[95%] p-3 md:w-[58%]  md:px-5  py-5 '>
+                <div data-aos='zoom-in' className='w-[95%] p-2 md:w-[48%] px-2 md:px-5  py-5 '>
                     <Form  className='bg-slate-950 p-5 rounded-[30px]'>
                         <h3 className="mb-3 ">Send Us a Message</h3>
                         <Form.Group className="mb-3 " controlId="exampleForm.ControlInput1">

@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     
-    <div className="bg-black/80 text-white w-full  fixed top-0 left-0 z-50 mt-0">
+    <div className="bg-black/90 text-white w-full  fixed top-0 left-0 z-50 mt-0">
         <div className="flex justify-between items-center   px-3 py-2 md:py-1">
            {/* ------Logo------ */}
             <div >

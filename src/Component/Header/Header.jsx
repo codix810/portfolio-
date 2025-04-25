@@ -35,9 +35,9 @@ const Header = () => {
             </div>
 
              {/* -----img-Header----- */}
-            <div className='  flex justify-center items-center md:w-1/2   '>
+            <div className='  flex justify-center items-center md:w-[48%]  '>
                 
-                    <img src={Img}  data-aos="zoom-in " className='rounded-lg '/>
+                    <img src={Img}  data-aos="zoom-in " className='rounded-lg    '/>
                 
             </div>
         </div>

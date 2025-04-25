@@ -10,7 +10,7 @@ const ChooseUs = () => {
             {/* titel-section */}
             <h1 data-aos="fade-up" className='text-center p-5 font-bold'>Why Choose Us</h1>
               {/* Body section   */}
-            <div className='flex flex-wrap justify-center items-center gap-5 pb-5' >
+            <div className='flex flex-wrap justify-center items-center gap-5 pb-5 px-3 text-center' >
                 {/* Part-1 */}
                 <div className='flex flex-col justify-center items-center '>
                     <FaShieldAlt  data-aos="fade-up" size={50}  color="blue" />
