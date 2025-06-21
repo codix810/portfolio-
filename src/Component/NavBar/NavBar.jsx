@@ -44,12 +44,12 @@ const NavBar = () => {
 
          {/* ------COntent-Menuo ------ */} 
         { menuOpen && (
-              <div className='flex flex-col  items-center gap-4 font-bold pb-4 md:hidden'>
-                <a href="#" className="text-white no-underline hover:translate-y-[-5px] duration-400">Services</a>
-                <a href="#" className="text-white no-underline hover:translate-y-[-5px] duration-400 ">About</a>
-                <a href="#" className="text-white no-underline hover:translate-y-[-5px] duration-400">Portfolio</a>
-                <a href="#" className="text-white no-underline hover:translate-y-[-5px] duration-400">Testimonials</a>
-                <a href="#" className="text-white no-underline hover:translate-y-[-5px] duration-400">Contact</a>
+              <div  onClick={toggleMenu} className='flex flex-col  items-center gap-4 font-bold pb-4 md:hidden'>
+                <a href="#Services" className="text-white no-underline hover:translate-y-[-5px] duration-400">Services</a>
+                <a href="#Expert" className="text-white no-underline hover:translate-y-[-5px] duration-400 ">About</a>
+                <a href="#Projcts" className="text-white no-underline hover:translate-y-[-5px] duration-400">Portfolio</a>
+                <a href="#Testimonials" className="text-white no-underline hover:translate-y-[-5px] duration-400">Testimonials</a>
+                <a href="#Contact" className="text-white no-underline hover:translate-y-[-5px] duration-400">Contact</a>
                 <Button variant="primary" >Get Started</Button>
               </div>
         )}
