@@ -18,7 +18,7 @@ const NavBar = () => {
         <div className="flex justify-between items-center   px-3 py-2 md:py-1">
            {/* ------Logo------ */}
             <div >
-                <h1 className='font-bold m-1 text-4xl cursor-pointer  '>Tech<span className='text-blue-500'>Forge</span></h1>
+                <h1 className='font-bold m-1 text-4xl cursor-pointer  '>Codi<span className='text-blue-500'>X</span></h1>
             </div>
             {/* ------Likes------ */}
             <div className='hidden md:flex gap-6 font-bold'>
