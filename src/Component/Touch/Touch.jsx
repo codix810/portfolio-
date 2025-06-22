@@ -39,15 +39,17 @@ const Touch = () => {
                     <h3 data-aos="fade-up" className='mb-3'>Contact Information </h3>
                     <div className='flex  flex-row gap-2'>
                         <CiLocationOn data-aos="fade-up" size={30} color="blue"/>
-                        <p data-aos="fade-up">123 Tech Street, Silicon Valley, CA 94025  </p>
+                        <p data-aos="fade-up">Egypt/Assuit</p>
                     </div>
                     <div className='flex  flex-row gap-2'>
                         <MdOutlineMail data-aos="fade-up" size={25}  color="blue"/>
-                        <p data-aos="fade-up">contact@techforge.com   </p>
+                        <p data-aos="fade-up">codix810@gmail.com</p>
                     </div>
                     <div className='flex  flex-row gap-2'>
                         <LuPhone data-aos="fade-up" size={25}  color="blue"/>
-                        <p data-aos="fade-up">+1555123-4567</p>
+                        <p data-aos="fade-up">+201001514586</p>
+                        <p data-aos="fade-up">+1555123-4567</p>{/* هنا انت ضيف رقمك*/}
+
                     </div>
                 </div>
             </div>
