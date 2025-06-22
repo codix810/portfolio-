@@ -42,7 +42,7 @@ const Footer = () => {
               </div>
             </div>
         </div>
-        <p className='text-white/50  text-center py-[20px]'>&copy; 2024 CodiX. All rights reserved.</p>
+        <p className='text-white/50  text-center py-[20px]'>&copy; 2025 CodiX. All rights reserved.</p>
     </div>
   )
 }
