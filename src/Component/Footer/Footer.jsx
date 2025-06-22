@@ -9,7 +9,7 @@ const Footer = () => {
         <div data-aos='zoom-in' className='flex justify-between gap-2  flex-wrap md:px-[100px] px-[70px] py-5  '>
             {/* logo */}
             <div>
-                <h1 className='font-bold m-1 text-3xl cursor-pointer mb-2 '>Tech<span className='text-blue-500'>Forge</span></h1>
+                <h1 className='font-bold m-1 text-3xl cursor-pointer mb-2 '>Codi<span className='text-blue-500'>X</span></h1>
                 <p className='text-white/50'>Transforming businesses through <br /> innovative digital solutions.  </p>
             </div>
             {/* Services */}
@@ -33,12 +33,16 @@ const Footer = () => {
               <p className='font-bold '>Follow US </p>
               <div className='flex gap-3'>
                <TiSocialTwitter className='text-white hover:text-blue-700 cursor-pointer hover:-translate-y-2 transition-transform duration-300' size={22} />
-                <FaLinkedin  className='text-white hover:text-blue-700 cursor-pointer hover:-translate-y-2 transition-transform duration-300' size={22} color='white'/>
-                <FaGithub  className='text-white hover:text-blue-700 cursor-pointer hover:-translate-y-2 transition-transform duration-300' size={22} color='white'/>
+                <a href="https://www.linkedin.com/in/codi-x-969178371?">
+                    <FaLinkedin  className='text-white hover:text-blue-700 cursor-pointer hover:-translate-y-2 transition-transform duration-300' size={22} color='white'/>
+                 </a>
+                  <a href="https://github.com/codix810">
+                    <FaGithub  className='text-white hover:text-blue-700 cursor-pointer hover:-translate-y-2 transition-transform duration-300' size={22} color='white'/>
+                 </a>
               </div>
             </div>
         </div>
-        <p className='text-white/50  text-center py-[20px]'>&copy; 2024 TechForge. All rights reserved.</p>
+        <p className='text-white/50  text-center py-[20px]'>&copy; 2024 CodiX. All rights reserved.</p>
     </div>
   )
 }
