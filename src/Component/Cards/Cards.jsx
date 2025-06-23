@@ -83,13 +83,14 @@ const Cards = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
 
-
-      <div className='text-center'>
-        <buttononClick={() => setShowAll(true)}className="mt-6 bg-blue-600 px-6 py-2 rounded text-white">
-           View all projects
-           <HiOutlineArrowSmRight size={22} color="blue" />
-        </button>
-      </div>     
+    
+        <div className='flex items-center px-1'>
+          <a  onClick={() => setShowAll(true)}
+            href="#" className="text-blue-500 no-underline hover:underline">
+            View all projects
+          </a>
+          <HiOutlineArrowSmRight size={22} color="blue" />
+        </div>
     </div>
 
       {/* Full screen overlay */}
