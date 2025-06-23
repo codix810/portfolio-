@@ -12,7 +12,10 @@ const Cards = () => {
 
 // قفل سكورول البودي لما الاوفرلاي يفتح
 useEffect(() => {
-    AOS.init({ once: true });
+     AOS.init({
+    duration: 800,
+    once: true,
+  });
   if (showAll) {
     document.body.style.overflow = 'hidden';
   } else {
