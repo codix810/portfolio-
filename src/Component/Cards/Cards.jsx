@@ -100,7 +100,7 @@ const Cards = () => {
 
       {/* Full screen overlay */}
       {showAll && (
-        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-y-auto overflow-x-hidden">
+      <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 max-h-screen overflow-auto">
           {/* زر الإغلاق */}
           <button
             onClick={() => setShowAll(false)}
