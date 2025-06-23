@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Ecommerce from '../../assets/E-commerce.avif';
 import Healthcare from '../../assets/Healthcare.jpg';
@@ -8,6 +8,19 @@ import { HiOutlineArrowSmRight, HiX } from "react-icons/hi";
 const Cards = () => {
   const [showAll, setShowAll] = useState(false);
 
+  //  التحكم في سكرول البودي
+  useEffect(() => {
+    if (showAll) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showAll]);
+
   const projects = [
     {
       id: 1,
@@ -15,15 +28,15 @@ const Cards = () => {
       tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind', 'Bootstrap'],
       desc: 'Delivery and supply store in your area',
       img: Ecommerce,
-      link:'https://speed-order.vercel.app',
+      link: 'https://speed-order.vercel.app',
     },
     {
       id: 2,
       title: 'Shopy',
-      tech: ['React', 'Vite','Tailwind'],
+      tech: ['React', 'Vite', 'Tailwind'],
       desc: 'Ready-made clothing store for men and women',
       img: Healthcare,
-      link:'https://mohamedmostafa-1.github.io/Shopy',
+      link: 'https://mohamedmostafa-1.github.io/Shopy',
     },
     {
       id: 3,
@@ -31,7 +44,7 @@ const Cards = () => {
       tech: ['React', 'Bootstrap'],
       desc: 'One-stop shop for all your essentials',
       img: Fitness,
-      link:'https://mansouri-store.vercel.app',
+      link: 'https://mansouri-store.vercel.app',
     },
     {
       id: 4,
@@ -39,7 +52,7 @@ const Cards = () => {
       tech: ['React', 'Vite', 'Tailwind'],
       desc: 'Electronics store selling all brands',
       img: Ecommerce,
-      link:'https://mohamedmostafa-1.github.io/TechNove',
+      link: 'https://mohamedmostafa-1.github.io/TechNove',
     },
     {
       id: 5,
@@ -47,7 +60,7 @@ const Cards = () => {
       tech: ['React', 'Bootstrap'],
       desc: 'One-stop shop for all your essentials',
       img: Healthcare,
-      link:'https://e-commerce-s6g6.vercel.app',
+      link: 'https://e-commerce-s6g6.vercel.app',
     },
     {
       id: 6,
@@ -55,7 +68,7 @@ const Cards = () => {
       tech: ['React', 'Bootstrap'],
       desc: 'Library for buying, selling and reading books',
       img: Fitness,
-      link:'https://al-mansouri-library.vercel.app',
+      link: 'https://al-mansouri-library.vercel.app',
     },
   ];
 
@@ -73,7 +86,6 @@ const Cards = () => {
         </div>
         <Card.Text className='text-white'>{project.desc}</Card.Text>
         <div className='flex items-center px-1'>
-
           <a href={project.link} className="text-blue-500 no-underline hover:underline">View the site</a>
           <HiOutlineArrowSmRight size={22} color="blue" />
         </div>
@@ -90,39 +102,38 @@ const Cards = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
 
-    
         <div className='flex items-center px-1'>
-          <a  onClick={() => setShowAll(true)}
+          <a onClick={() => setShowAll(true)}
             href="#" className="text-blue-500 no-underline hover:underline">
             View all projects
           </a>
           <HiOutlineArrowSmRight size={22} color="blue" />
         </div>
-    </div>
+      </div>
 
       {/* Full screen overlay */}
-   {showAll && (
-     <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-y-auto overflow-x-hidden">
+      {showAll && (
+        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-y-auto overflow-x-hidden">
 
-    {/* زر الإغلاق */}
-    <button
-      onClick={() => setShowAll(false)}
-      className="absolute top-6 right-6 text-white bg-blue-600 p-2 rounded-full hover:bg-blue-700 focus:outline-none"
-      aria-label="Close"
-    >
-      <HiX size={24} />
-    </button>
+          {/* زر الإغلاق */}
+          <button
+            onClick={() => setShowAll(false)}
+            className="absolute top-6 right-6 text-white bg-blue-600 p-2 rounded-full hover:bg-blue-700 focus:outline-none"
+            aria-label="Close"
+          >
+            <HiX size={24} />
+          </button>
 
-    <h2 className="text-white text-2xl mb-4 text-center mt-4">All projects </h2>
+          <h2 className="text-white text-2xl mb-4 text-center mt-4">All projects</h2>
 
-    {/* عرض الكروت */}
-    <div className='px-5 flex items-center flex-wrap justify-center gap-[80px]'>
-      {projects.map(project => (
-        <ProjectCard key={project.id} project={project} />
-      ))}
-    </div>
-  </div>
-)}
+          {/* عرض الكروت */}
+          <div className='px-5 flex items-center flex-wrap justify-center gap-[80px]'>
+            {projects.map(project => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
