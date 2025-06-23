@@ -74,7 +74,7 @@ const Cards = () => {
         <Card.Text className='text-white'>{project.desc}</Card.Text>
         <div className='flex items-center px-1'>
 
-          <a href={project.link} className="text-blue-500 no-underline hover:underline">View Case Study</a>
+          <a href={project.link} className="text-blue-500 no-underline hover:underline">View the site</a>
           <HiOutlineArrowSmRight size={22} color="blue" />
         </div>
       </Card.Body>
