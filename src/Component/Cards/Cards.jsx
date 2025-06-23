@@ -82,7 +82,7 @@ const Cards = () => {
         {projects.slice(0, 3).map(project => (
           <ProjectCard key={project.id} project={project} />
         ))}
-      </div>
+
 
       <div className='text-center'>
         <button
@@ -91,7 +91,7 @@ const Cards = () => {
         >
           عرض المزيد
         </button>
-      </div>
+      </div>      </div>
 
       {/* Full screen overlay */}
       {showAll && (
