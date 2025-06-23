@@ -94,20 +94,28 @@ const Cards = () => {
     </div>
 
       {/* Full screen overlay */}
-      {showAll && (
-        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-auto">
-         <button onClick={() => setShowAll(false)} 
-           className="absolute top-6 right-6 text-white bg-red-600 p-2 rounded-full hover:bg-red-700" aria-label="Close">
-           <HiX size={24} />
-        </button>
-          <h2 className="text-white text-2xl mb-4 text-center"> All projects</h2>
-          <div className='px-5 flex items-center flex-wrap justify-center gap-[80px]'>
-            {projects.map(project => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </div>
-      )}
+   {showAll && (
+     <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-y-auto overflow-x-hidden">
+
+    {/* زر الإغلاق */}
+    <button
+      onClick={() => setShowAll(false)}
+      className="absolute top-6 right-6 text-white bg-blue-600 p-2 rounded-full hover:bg-blue-700 focus:outline-none"
+      aria-label="Close"
+    >
+      <HiX size={24} />
+    </button>
+
+    <h2 className="text-white text-2xl mb-4 text-center mt-4">All projects </h2>
+
+    {/* عرض الكروت */}
+    <div className='px-5 flex items-center flex-wrap justify-center gap-[80px]'>
+      {projects.map(project => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
+    </div>
+  </div>
+)}
     </div>
   );
 };
