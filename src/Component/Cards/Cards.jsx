@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Ecommerce from '../../assets/E-commerce.avif';
 import Healthcare from '../../assets/Healthcare.jpg';
@@ -6,75 +6,113 @@ import Fitness from '../../assets/Fitness.webp';
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 
 const Cards = () => {
-  return (
-    <div id='Projcts' className='bg-slate-950 text-white w-full '>
-      <div >
-        {/* titel-section */}
-        <h1 data-aos="fade-up" className='text-center p-5 font-bold'>Featured Projects</h1>
-        <div className='border-none outline-none px-5 flex items-center flex-wrap justify-center gap-[80px]  '>
-          {/* Card-1 */}
-          <Card data-aos="fade-up" className='bg-black mb-5 ' style={{ width: '22rem' }}>
-            <Card.Img variant="top"  src={Ecommerce} />
-            <Card.Body>
-              <Card.Title className='text-white '>E-commerce Platform</Card.Title>
-                  <div class="px-2 pt-1 pb-1">
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">React </span>
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">Node.js</span>
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">MongoDB</span>
-                    </div>
-              <Card.Text className='text-white '>
-                Modern e-commerce solution with advanced 
-              </Card.Text>
-               <div className='flex items-center px-1  '>
-                  <a href="#" className="text-blue-500 no-underline hover:underline">View Case Study </a>
-                  <HiOutlineArrowSmRight  size={22}  color="blue"/>
-                </div>
-              
-            </Card.Body>
-          </Card>
-          {/* Card-2 */}
-          <Card data-aos="fade-up" className='bg-black mb-5  ' style={{ width: '22rem' }}>
-            <Card.Img variant="top"  src={Healthcare} />
-            <Card.Body>
-              <Card.Title className='text-white '>Healthcare Dashboard</Card.Title>
-                  <div class="px-2 pt-1 pb-1">
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">Vue </span>
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">Python</span>
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">PostgreSQL</span>
-                    </div>
-              <Card.Text className='text-white '>
-              Analytics dashboard for healthcare providers
-              </Card.Text>
-               <div className='flex items-center px-1  '>
-                  <a href="#" className="text-blue-500 no-underline hover:underline">View Case Study </a>
-                  <HiOutlineArrowSmRight  size={22}  color="blue"/>
-                </div>
-              
-            </Card.Body>
-          </Card>
-          {/* Card-3 */}
-          <Card data-aos="fade-up" className='bg-black mb-5 ' style={{ width: '22rem' }}>
-            <Card.Img variant="top"  src={Fitness} />
-            <Card.Body>
-              <Card.Title className='text-white '>Fitness APP</Card.Title>
-                  <div class="px-2 pt-1 pb-1">
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">React Native </span>
-                     <span class="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">Firebase</span>
-                    </div>
-              <Card.Text className='text-white '>
-               Cross-platform mobile fitness tracking app
-              </Card.Text>
-               <div className='flex items-center px-1  '>
-                  <a href="#" className="text-blue-500 no-underline hover:underline">View Case Study </a>
-                  <HiOutlineArrowSmRight  size={22}  color="blue"/>
-                </div>
-              
-            </Card.Body>
-          </Card>
-        </div>
-      </div>
-    </div>
-  )
-}
+  const [showAll, setShowAll] = useState(false);
 
-export default Cards
+  const projects = [
+    {
+      id: 1,
+      title: 'E-commerce Platform',
+      tech: ['React', 'Node.js', 'MongoDB'],
+      desc: 'Modern e-commerce solution with advanced',
+      img: Ecommerce,
+    },
+    {
+      id: 2,
+      title: 'Healthcare Dashboard',
+      tech: ['Vue', 'Python', 'PostgreSQL'],
+      desc: 'Analytics dashboard for healthcare providers',
+      img: Healthcare,
+    },
+    {
+      id: 3,
+      title: 'Fitness App',
+      tech: ['React Native', 'Firebase'],
+      desc: 'Cross-platform mobile fitness tracking app',
+      img: Fitness,
+    },
+    {
+      id: 4,
+      title: 'Real Estate System',
+      tech: ['Laravel', 'MySQL', 'Bootstrap'],
+      desc: 'Property listing and booking platform',
+      img: Ecommerce,
+    },
+    {
+      id: 5,
+      title: 'Food Delivery',
+      tech: ['Next.js', 'Supabase'],
+      desc: 'Fast food ordering app with location tracking',
+      img: Healthcare,
+    },
+    {
+      id: 6,
+      title: 'Online Learning',
+      tech: ['React', 'Express', 'MongoDB'],
+      desc: 'Educational platform for remote students',
+      img: Fitness,
+    },
+  ];
+
+  const ProjectCard = ({ project }) => (
+    <Card data-aos="fade-up" className='bg-black mb-5' style={{ width: '22rem' }}>
+      <Card.Img variant="top" src={project.img} />
+      <Card.Body>
+        <Card.Title className='text-white'>{project.title}</Card.Title>
+        <div className="px-2 pt-1 pb-1">
+          {project.tech.map((tech, idx) => (
+            <span key={idx} className="inline-block bg-blue-950 rounded-full px-2 py-1 text-sm font-semibold text-blue-300 mr-2 mb-2">
+              {tech}
+            </span>
+          ))}
+        </div>
+        <Card.Text className='text-white'>{project.desc}</Card.Text>
+        <div className='flex items-center px-1'>
+          <a href="#" className="text-blue-500 no-underline hover:underline">View Case Study</a>
+          <HiOutlineArrowSmRight size={22} color="blue" />
+        </div>
+      </Card.Body>
+    </Card>
+  );
+
+  return (
+    <div id='Projcts' className='bg-slate-950 text-white w-full'>
+      <h1 data-aos="fade-up" className='text-center p-5 font-bold'>Featured Projects</h1>
+
+      <div className='px-5 flex items-center flex-wrap justify-center gap-[80px]'>
+        {projects.slice(0, 3).map(project => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+
+      <div className='text-center'>
+        <button
+          onClick={() => setShowAll(true)}
+          className="mt-6 bg-blue-600 px-6 py-2 rounded text-white"
+        >
+          عرض المزيد
+        </button>
+      </div>
+
+      {/* Full screen overlay */}
+      {showAll && (
+        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-auto">
+          <button
+            onClick={() => setShowAll(false)}
+            className="text-white bg-red-600 px-4 py-2 rounded mb-6"
+          >
+            إغلاق
+          </button>
+          <h2 className="text-white text-2xl mb-4 text-center">جميع المشاريع</h2>
+
+          <div className='px-5 flex items-center flex-wrap justify-center gap-[80px]'>
+            {projects.map(project => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Cards;
