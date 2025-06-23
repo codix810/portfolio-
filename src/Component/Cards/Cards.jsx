@@ -50,6 +50,7 @@ const Cards = () => {
       tech: ['React', 'Bootstrap'],
       desc: 'Educational platform for remote students',
       img: Fitness,
+      link:'https://al-mansouri-library.vercel.app'
     },
   ];
 
@@ -67,7 +68,8 @@ const Cards = () => {
         </div>
         <Card.Text className='text-white'>{project.desc}</Card.Text>
         <div className='flex items-center px-1'>
-          <a href="#" className="text-blue-500 no-underline hover:underline">View Case Study</a>
+
+          <a href={project.link} className="text-blue-500 no-underline hover:underline">View Case Study</a>
           <HiOutlineArrowSmRight size={22} color="blue" />
         </div>
       </Card.Body>
