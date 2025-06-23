@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Ecommerce from '../../assets/E-commerce.avif';
 import Healthcare from '../../assets/Healthcare.jpg';
 import Fitness from '../../assets/Fitness.webp';
-import { HiOutlineArrowSmRight } from "react-icons/hi";
+import { HiOutlineArrowSmRight, HiX } from "react-icons/hi";
 
 const Cards = () => {
   const [showAll, setShowAll] = useState(false);
@@ -85,25 +85,21 @@ const Cards = () => {
 
 
       <div className='text-center'>
-        <button
-          onClick={() => setShowAll(true)}
-          className="mt-6 bg-blue-600 px-6 py-2 rounded text-white"
-        >
-          عرض المزيد
+        <buttononClick={() => setShowAll(true)}className="mt-6 bg-blue-600 px-6 py-2 rounded text-white">
+           View all projects
+           <HiOutlineArrowSmRight size={22} color="blue" />
         </button>
-      </div>      </div>
+      </div>     
+    </div>
 
       {/* Full screen overlay */}
       {showAll && (
         <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-auto">
-          <button
-            onClick={() => setShowAll(false)}
-            className="text-white bg-red-600 px-4 py-2 rounded mb-6"
-          >
-            إغلاق
-          </button>
-          <h2 className="text-white text-2xl mb-4 text-center">جميع المشاريع</h2>
-
+         <button onClick={() => setShowAll(false)} 
+           className="absolute top-6 right-6 text-white bg-red-600 p-2 rounded-full hover:bg-red-700" aria-label="Close">
+           <HiX size={24} />
+        </button>
+          <h2 className="text-white text-2xl mb-4 text-center"> All projects</h2>
           <div className='px-5 flex items-center flex-wrap justify-center gap-[80px]'>
             {projects.map(project => (
               <ProjectCard key={project.id} project={project} />
