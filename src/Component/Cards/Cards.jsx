@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Ecommerce from '../../assets/E-commerce.avif';
 import Healthcare from '../../assets/Healthcare.jpg';
 import Fitness from '../../assets/Fitness.webp';
 import { HiOutlineArrowSmRight, HiX } from "react-icons/hi";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Cards = () => {
   const [showAll, setShowAll] = useState(false);
+
+// قفل سكورول البودي لما الاوفرلاي يفتح
+useEffect(() => {
+    AOS.init({ once: true });
+  if (showAll) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+
+  return () => {
+    document.body.style.overflow = 'auto';
+  };
+}, [showAll]);
+
 
   const projects = [
     {
@@ -100,7 +117,8 @@ const Cards = () => {
 
       {/* Full screen overlay */}
       {showAll && (
-      <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 max-h-screen overflow-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-y-auto overflow-x-hidden">
+
           {/* زر الإغلاق */}
           <button
             onClick={() => setShowAll(false)}
