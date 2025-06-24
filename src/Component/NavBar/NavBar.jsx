@@ -30,7 +30,7 @@ const NavBar = () => {
             </div>
               {/* ------Button------ */}
             <div className='p-1 mt-2 hidden md:block  '>
-              <Button variant="primary" >Get Started</Button>
+              <Button variant="primary" href='#Contact' >Get Started</Button>
             </div>
 
             {/* ------Responsive-icon ------ */}
@@ -50,7 +50,7 @@ const NavBar = () => {
                 <a href="#Projcts" className="text-white no-underline hover:translate-y-[-5px] duration-400">Portfolio</a>
                 <a href="#Testimonials" className="text-white no-underline hover:translate-y-[-5px] duration-400">Testimonials</a>
                 <a href="#Contact" className="text-white no-underline hover:translate-y-[-5px] duration-400">Contact</a>
-                <Button variant="primary" >Get Started</Button>
+                <Button variant="primary" href='#Contact' >Get Started</Button>
               </div>
         )}
 

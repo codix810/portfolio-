@@ -31,7 +31,7 @@ const Testimonials = () => {
                             </div>
                              {/* details Card */}
                             <div>
-                              <p>"TechForge delivered beyond our expectations. Their team's expertise and professionalism are outstanding." </p>
+                              <p>"CodiX delivered beyond our expectations. Their team's expertise and professionalism are outstanding." </p>
                             </div>
                             <div className='flex  items-center  '>
                                 <img className='w-[50px] h-[50px] rounded-full m-2' src={Testmon1} alt="" />

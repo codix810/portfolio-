@@ -29,8 +29,8 @@ const Header = () => {
                 secure, and innovative digital experiences.
                 </p>
                 <div   data-aos="fade-up" className='flex gap-4'>
-                 <Button variant="primary" >Let's Buld Together </Button>
-                 <Button variant="outline-primary"><a href="#" className='no-underline  text-white '>View Portfolio</a></Button>
+                 <Button variant="primary" href='#Contact'>Let's Buld Together </Button>
+                 <Button variant="outline-primary" href='#Projcts'><a href="#" className='no-underline  text-white '>View Portfolio</a></Button>
                 </div>
             </div>
 

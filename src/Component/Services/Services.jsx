@@ -17,8 +17,8 @@ const Services = () => {
                     <FaCode size={40}  color="blue" />
                     <h2>Website Development</h2>
                     <p>Custom websites bult madem technologies and best practices</p>
-                    <div className='flex items-center  '>
-                    <a href="#" className="text-blue-500 no-underline hover:underline">Leam More</a>
+                    <div  className='flex items-center  '>
+                    <a href="#Projcts" className="text-blue-500 no-underline hover:underline">Leam More</a>
                     <HiOutlineArrowSmRight  size={22}  color="blue"/>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ const Services = () => {
                     <h2>Mobile App Development </h2>
                     <p>Native cross-platform mobile applications   </p>
                     <div className='flex items-center  '>
-                    <a href="#" className="text-blue-500 no-underline hover:underline">Leam More</a>
+                    <a href="#Projcts" className="text-blue-500 no-underline hover:underline">Leam More</a>
                     <HiOutlineArrowSmRight  size={22}  color="blue"/>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ const Services = () => {
                     <h2>Web Applications & Dashboards </h2>
                     <p>Complex web applications with powerful analytics  </p>
                     <div className='flex items-center  '>
-                    <a href="#" className="text-blue-500 no-underline hover:underline">Leam More</a>
+                    <a href="#Projcts" className="text-blue-500 no-underline hover:underline">Leam More</a>
                     <HiOutlineArrowSmRight  size={22}  color="blue"/>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const Services = () => {
                     <h2>Digital Marketing   </h2>
                     <p>Strategic digital marketing solutions for growth</p>
                     <div className='flex items-center  '>
-                    <a href="#" className="text-blue-500 no-underline hover:underline">Leam More</a>
+                    <a href="#Projcts" className="text-blue-500 no-underline hover:underline">Leam More</a>
                     <HiOutlineArrowSmRight  size={22}  color="blue"/>
                     </div>
                 </div>

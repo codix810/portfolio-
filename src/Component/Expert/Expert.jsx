@@ -1,6 +1,6 @@
 import React from 'react'
-import Alex from '../../assets/meet4.jpg'
-import Sarah from '../../assets/meet3.png'
+import Mahmoud from '../../assets/WhatsApp_Image_2025-06-24_at_03.30.37_e545f54f-removebg-preview.png'
+import Mohamed from '../../assets/WhatsApp_Image_2025-06-24_at_03.36.50_4a8a745c-removebg-preview.png'
 import David from '../../assets/meet2.png'
 import Emma from '../../assets/meet1.jpg'
 
@@ -12,51 +12,46 @@ const Expert = () => {
             <h1 data-aos="fade-up" className='text-center text-white p-5 font-bold'> Meet Our Expert </h1>
 
             {/* ------Img-&-Details------ */}
-            <div className=' flex justify-around   flex-wrap pb-[70px] gap-3'>
-            {/* ------Img-&-Details-1------ */}
-                <div className='text-white font-bold m-1 p-2 W-[25%] flex flex-col'>
-                    <img data-aos="fade-up" src={Alex} className='w-[190px] h-[180px] rounded-[50%] ' />
-                    <h5 data-aos="fade-up" className='text-center mt-2' >Alex Morgan</h5>
-                    <p data-aos="fade-up" className='text-blue-700 text-sm text-center'>Frontend Lead</p>
-                    <ul className='flex gap-2  text-center '>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[50px]  p-1 text-sm cursor-pointer  rounded-[20px]'>React</li>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[40px]  p-1 text-sm cursor-pointer  rounded-[20px]'>Vue</li>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[50px]  p-1 text-sm cursor-pointer  rounded-[20px]'>UI/UX</li>
+            <div className=' flex justify-around   flex-wrap pb-[50px] gap-3'>
+               {/* ------Img-&-Details-1------ */}
+               <div className=" text-white font-semibold m-3 p-4 w-[280px] rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-500 flex flex-col items-center">
+                    <img data-aos="fade-up" src={Mahmoud} alt="Sarah Chen" className="w-[190px] h-[190px] rounded-full object-cover border-3 border-blue-600 bg-slate-500 shadow-md"/>
+                    <h5 data-aos="fade-up" className="text-xl mt-4 text-center font-bold text-white" >Mahmoud Ali </h5>
+                    <p data-aos="fade-up" className="text-blue-400 text-sm mt-1 mb-3 text-center">Backend Lead</p>
+                    <ul data-aos="fade-up" className="flex flex-wrap justify-center gap-2 mt-2">
+                        <li className="bg-gray-700 hover:bg-blue-600 px-4 py-1 text-sm rounded-full transition-all duration-300 cursor-pointer">
+                        Node.js
+                        </li>
+                        <li className="bg-gray-700 hover:bg-blue-600 px-4 py-1 text-sm rounded-full transition-all duration-300 cursor-pointer">
+                        Express
+                        </li>
+                        <li className="bg-gray-700 hover:bg-blue-600 px-4 py-1 text-sm rounded-full transition-all duration-300 cursor-pointer">
+                        MongoDB
+                        </li>
                     </ul>
                 </div>
                 {/* ------Img-&-Details-2------ */}
-                <div className='text-white font-bold m-1 p-2 W-[25%] flex  flex-col'>
-                    <img data-aos="fade-up" src={Sarah} className='w-[190px] h-[180px] rounded-[50%]   ' />
-                    <h5 data-aos="fade-up" className='text-center mt-2' >Sarah Chen </h5>
-                    <p data-aos="fade-up" className='text-blue-700 text-sm text-center'>Backend Developer</p>
-                    <ul data-aos="fade-up" className='flex gap-2 text-center '>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[60px]  p-1 text-sm cursor-pointer  rounded-[20px]'>Node.js</li>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[60px]  p-1 text-sm cursor-pointer  rounded-[20px]'>Python</li>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[50px]  p-1 text-sm cursor-pointer  rounded-[20px]'>AWS</li>
-                    </ul>
-                </div>
-                {/* ------Img-&-Details-3------ */}
-                <div className='text-white font-bold m-1 p-2 W-[25%] flex flex-col'>
-                    <img data-aos="fade-up" src={David} className='w-[190px] h-[180px] rounded-[50%] ' />
-                    <h5 data-aos="fade-up" className='text-center mt-2' >David Kim</h5>
-                    <p data-aos="fade-up" className='text-blue-700 text-sm text-center'>Security Epert</p>
-                    <ul data-aos="fade-up" className='flex gap-2  text-center '>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[100px]  p-1 text-sm cursor-pointer rounded-[20px]'>Cybersecurity</li>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[60px]   p-1 text-sm cursor-pointer rounded-[20px]'>DevOps</li>
-                    </ul>
-                </div>
-                 {/* ------Img-&-Details-4------ */}
-                 <div className='text-white font-bold m-1 p-2 W-[25%] flex flex-col'>
-                    <img data-aos="fade-up" src={Emma} className='w-[190px] h-[180px] rounded-[50%] ' />
-                    <h5 data-aos="fade-up" className='text-center mt-2' >Emma Wilson</h5>
-                    <p data-aos="fade-up" className='text-blue-700 text-sm text-center '>Digital Marketer</p>
-                    <ul data-aos="fade-up" className='flex gap-2  text-center'>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[40px]  p-1  text-sm cursor-pointer  rounded-[20px]'>SEO</li>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[65px]  p-1  text-sm cursor-pointer  rounded-[20px]'>Analyics</li>
-                        <li data-aos="fade-up" className='bg-gray-900 w-[60px]  p-1  text-sm cursor-pointer  rounded-[20px]'>Content</li>
+               <div className=" text-white font-semibold m-3 p-4 w-[280px] rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-500 flex flex-col items-center">
+                    <img data-aos="fade-up" src={Mohamed} alt="Sarah Chen" className="w-[190px] h-[190px] rounded-full object-cover border-3 border-blue-600 bg-slate-500 shadow-md"/>
+                    <h5 data-aos="fade-up" className="text-xl mt-4 text-center font-bold text-white" >Mohamed Mostafa </h5>
+                    <p data-aos="fade-up" className="text-blue-400 text-sm mt-1 mb-3 text-center">Frontend Lead</p>
+                    <ul data-aos="fade-up" className="flex flex-wrap justify-center gap-2 mt-2">
+                        <li className="bg-gray-700 hover:bg-blue-600 px-4 py-1 text-sm rounded-full transition-all duration-300 cursor-pointer">
+                        React.js
+                        </li>
+                        <li className="bg-gray-700 hover:bg-blue-600 px-4 py-1 text-sm rounded-full transition-all duration-300 cursor-pointer">
+                        Next.js
+                        </li>
+                        <li className="bg-gray-700 hover:bg-blue-600 px-4 py-1 text-sm rounded-full transition-all duration-300 cursor-pointer">
+                        TypeScript
+                        </li>
                     </ul>
                 </div>
 
+                {/* ------Img-&-Details-3------ */}
+              
+                 {/* ------Img-&-Details-4------ */}
+               
             </div>
         </div>
     </div>

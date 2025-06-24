@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { CiLocationOn } from "react-icons/ci";
@@ -6,6 +6,29 @@ import { MdOutlineMail } from "react-icons/md";
 import { LuPhone } from "react-icons/lu";
 
 const Touch = () => {
+
+    const [formData , setFormData]= useState({
+        name:'',
+        email:'',
+        massage:''
+    });
+
+    const handleChange = (e)=>{
+        const{name,value}= e.target;
+        setFormData((prev)=>({
+            ...prev,
+            [name]:value
+        }));
+    }
+
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        localStorage.setItem("formData", JSON.stringify(formData))
+        setFormData({name: "", email: "", message: ""});
+        alert('Will contact you ! ✅');
+    }
+
+
   return (
     <div id='Contact' className='bg-black text-white w-full border-b  border-white/20'>
         <div >
@@ -15,19 +38,19 @@ const Touch = () => {
             <div className='flex flex-col md:flex-row  '>
                 {/* Form */}
                 <div data-aos='zoom-in' className='w-[95%] p-2 md:w-[48%] px-2 md:px-5  py-5 '>
-                    <Form  className='bg-slate-950 p-5 rounded-[30px]'>
+                    <Form onSubmit={handleSubmit}  className='bg-slate-950 p-5 rounded-[30px]'>
                         <h3 className="mb-3 ">Send Us a Message</h3>
                         <Form.Group className="mb-3 " controlId="exampleForm.ControlInput1">
                             <Form.Label> Name</Form.Label>
-                            <Form.Control type="text" className='bg-black'  />
+                            <Form.Control type="text" name='name' onChange={handleChange} className='bg-black text-white'  />
                         </Form.Group>
                         <Form.Group className="mb-3 " controlId="exampleForm.ControlInput1">
                             <Form.Label>Email </Form.Label>
-                            <Form.Control type="email" className='bg-black'  />
+                            <Form.Control type="email" name='email'  onChange={handleChange}  className='bg-black text-white'  />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" rows={3}  className='bg-black' />
+                            <Form.Control as="textarea" name='massage' rows={3}  onChange={handleChange}   className='bg-black text-white' />
                         </Form.Group>
                         <Button variant="primary" type="submit" className='mt-3 w-full py-2 '>
                         Send Message
@@ -48,7 +71,7 @@ const Touch = () => {
                     <div className='flex  flex-row gap-2'>
                         <LuPhone data-aos="fade-up" size={25}  color="blue"/>
                         <p data-aos="fade-up">+201001514586</p>
-                        <p data-aos="fade-up">+1555123-4567</p>{/* هنا انت ضيف رقمك*/}
+                        <p data-aos="fade-up">& +201010721434</p>{/* هنا انت ضيف رقمك*/}
 
                     </div>
                 </div>

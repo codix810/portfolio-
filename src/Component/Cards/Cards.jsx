@@ -81,7 +81,7 @@ useEffect(() => {
 
   const ProjectCard = ({ project }) => (
     <Card data-aos="fade-up" className='bg-black mb-5' style={{ width: '22rem' }}>
-      <Card.Img variant="top" src={project.img} />
+      <Card.Img className='h-52' variant="top" src={project.img} />
       <Card.Body>
         <Card.Title className='text-white'>{project.title}</Card.Title>
         <div className="px-2 pt-1 pb-1">
@@ -93,7 +93,7 @@ useEffect(() => {
         </div>
         <Card.Text className='text-white'>{project.desc}</Card.Text>
         <div className='flex items-center px-1'>
-          <a href={project.link} className="text-blue-500 no-underline hover:underline">View the site</a>
+          <a href={project.link}className="text-blue-500 no-underline hover:underline">View the site</a>
           <HiOutlineArrowSmRight size={22} color="blue" />
         </div>
       </Card.Body>
@@ -109,18 +109,19 @@ useEffect(() => {
           <ProjectCard key={project.id} project={project} />
         ))}
 
-        <div className='flex items-center px-1'>
-          <a onClick={() => setShowAll(true)}
-            href="#" className="text-blue-500 no-underline hover:underline">
+    
+        <div className='flex mb-20 p-2 bg-blue-900 rounded-md'>
+          <a  onClick={() => setShowAll(true)}
+            href="#" className="text-white no-underline hover:underline">
             View all projects
           </a>
-          <HiOutlineArrowSmRight size={22} color="blue" />
+          <HiOutlineArrowSmRight size={22} color="white" />
         </div>
       </div>
 
       {/* Full screen overlay */}
-      {showAll && (
-        <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-y-auto overflow-x-hidden">
+   {showAll && (
+     <div className="fixed inset-0 bg-black bg-opacity-95 z-50 p-6 overflow-y-auto overflow-x-hidden">
 
           {/* زر الإغلاق */}
           <button
