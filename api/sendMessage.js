@@ -1,11 +1,18 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGO_URI;
+console.log("📦 MONGO_URI = ", uri); // مهم
+
 let client;
 let clientPromise;
 
 if (!global._mongoClientPromise) {
-  client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+  client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true,
+    tlsAllowInvalidCertificates: true,
+  });
   global._mongoClientPromise = client.connect();
 }
 clientPromise = global._mongoClientPromise;
@@ -25,16 +32,17 @@ export default async function handler(req, res) {
     const client = await clientPromise;
     const db = client.db("houdaDB");
 
-    await db.collection("messages").insertOne({
+    const result = await db.collection("messages").insertOne({
       name,
       email,
       message,
       createdAt: new Date(),
     });
 
+    console.log("✅ Insert result:", result.insertedId);
     return res.status(200).json({ message: "Message stored successfully!" });
   } catch (error) {
-    console.error("🔥🔥🔥 REAL ERROR:", error); // دي مهمة
-    return res.status(500).json({ message: error.message }); // يرجع سبب الخطأ في الفرونت
+    console.error("🔥🔥🔥 REAL ERROR:", error);
+    return res.status(500).json({ message: error.message });
   }
-
+}
