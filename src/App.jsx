@@ -40,6 +40,7 @@ const App = () => {
       <ChooseUs/>
       <Testimonials/>
       <Touch/>
+      <ContactForm/>
       <Footer/>
       <ScrollToTopButton/>
     </div>
