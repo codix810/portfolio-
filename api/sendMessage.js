@@ -1,6 +1,11 @@
 import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGO_URI;
+if (!uri) {
+  console.error("❌ MONGO_URI is undefined!");
+  return res.status(500).json({ message: "MONGO_URI is not set!" });
+}
+
 const options = {};
 
 let client;
