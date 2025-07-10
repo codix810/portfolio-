@@ -10,7 +10,6 @@ import Cards from './Component/Cards/Cards';
 import ChooseUs from './Component/ChooseUs/ChooseUs';
 import Testimonials from './Component/Testimonials/Testimonials';
 import Touch from './Component/Touch/Touch';
-import ContactForm from './Component/ContactForm';
 import Footer from './Component/Footer/Footer';
 import ScrollToTopButton from './Component/ScrollToTopButton/ScrollToTopButton';
 
@@ -40,7 +39,6 @@ const App = () => {
       <ChooseUs/>
       <Testimonials/>
       <Touch/>
-      <ContactForm/>
       <Footer/>
       <ScrollToTopButton/>
     </div>
